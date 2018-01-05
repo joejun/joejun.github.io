@@ -3,19 +3,19 @@
 <head>
     <meta charset="utf-8">
     
-    <title>About | never too late</title>
+    <title>(Hexo+Github)绑定个人域名 | never too late</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="备忘 整理 思维导图">
-<meta property="og:type" content="website">
-<meta property="og:title" content="About">
-<meta property="og:url" content="http://yoursite.com/about/index.html">
+    <meta name="description" content="域名服务选择GoDaddy，国内的万网虽然便宜些，但据说有诸多弊端（随时会被zf关停~）； GoDaddy 购买： 我选择1年的，其他都不选择（要钱的啊-.-），支持支付宝购买~ 激活： 会往注册邮箱发送激活邮件，记得确认才能在GoDaddy上继续配置 配置： DNS MANAGEMENT目录下 添加Records，blog为子域名   Type  |    Name |    Value">
+<meta property="og:type" content="article">
+<meta property="og:title" content="(Hexo+Github)绑定个人域名">
+<meta property="og:url" content="http://yoursite.com/2018/01/05/bind-domain/index.html">
 <meta property="og:site_name" content="never too late">
-<meta property="og:description" content="备忘 整理 思维导图">
+<meta property="og:description" content="域名服务选择GoDaddy，国内的万网虽然便宜些，但据说有诸多弊端（随时会被zf关停~）； GoDaddy 购买： 我选择1年的，其他都不选择（要钱的啊-.-），支持支付宝购买~ 激活： 会往注册邮箱发送激活邮件，记得确认才能在GoDaddy上继续配置 配置： DNS MANAGEMENT目录下 添加Records，blog为子域名   Type  |    Name |    Value">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-01-03T06:21:16.899Z">
+<meta property="og:updated_time" content="2018-01-05T01:22:34.202Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="About">
-<meta name="twitter:description" content="备忘 整理 思维导图">
+<meta name="twitter:title" content="(Hexo+Github)绑定个人域名">
+<meta name="twitter:description" content="域名服务选择GoDaddy，国内的万网虽然便宜些，但据说有诸多弊端（随时会被zf关停~）； GoDaddy 购买： 我选择1年的，其他都不选择（要钱的啊-.-），支持支付宝购买~ 激活： 会往注册邮箱发送激活邮件，记得确认才能在GoDaddy上继续配置 配置： DNS MANAGEMENT目录下 添加Records，blog为子域名   Type  |    Name |    Value">
     
 
     
@@ -210,7 +210,7 @@
 </aside>
 
             
-            <section id="main"><article id="page-" class="article article-type-page" itemscope itemprop="blogPost">
+            <section id="main"><article id="post-bind-domain" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
         
@@ -218,10 +218,24 @@
                 
     
         <h1 class="article-title" itemprop="name">
-            About
+            (Hexo+Github)绑定个人域名
         </h1>
     
 
+                
+                    <div class="article-meta">
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/2018/01/05/bind-domain/">
+            <time datetime="2018-01-05T00:55:45.467Z" itemprop="datePublished">2018-01-05</time>
+        </a>
+    </div>
+
+
+                        
+                        
+                    </div>
                 
             </header>
         
@@ -229,7 +243,20 @@
         <div class="article-entry" itemprop="articleBody">
         
             
-            
+            <p>域名服务选择GoDaddy，国内的万网虽然便宜些，但据说有诸多弊端（随时会被zf关停~）；</p>
+<h2 id="GoDaddy"><a href="#GoDaddy" class="headerlink" title="GoDaddy"></a>GoDaddy</h2><ul>
+<li>购买： 我选择1年的，其他都不选择（要钱的啊-.-），支持支付宝购买~</li>
+<li>激活： 会往注册邮箱发送激活邮件，记得确认才能在GoDaddy上继续配置</li>
+<li>配置： DNS MANAGEMENT目录下 添加Records，blog为子域名<br>  <strong> Type  |    Name |    Value  
+  </strong> CNAME |    blog |    joejun.github.io <h2 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo"></a>Hexo</h2></li>
+<li><p>添加CNAME：注意必须是大写，在hexo的source目录下新建，里面写入域名</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">blog.zhaopeijun.com</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>生成文件，上传github，测试<a href="blog.zhaopeijun.com">博客地址</a>ok~ </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+
         
         </div>
         <footer class="article-footer">
@@ -239,7 +266,7 @@
 
 </div>
 
-    <a data-url="http://yoursite.com/about/index.html" data-id="cjc17gydx000288fcfeee9tqv" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://yoursite.com/2018/01/05/bind-domain/" data-id="cjc18kz850000m8fc58i433pe" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -312,6 +339,16 @@
     </div>
     
         
+<nav id="article-nav">
+    
+    
+        <a href="/2018/01/03/hexo-theme-setup/" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">Older</strong>
+            <div class="article-nav-title">使用Hexo+Github搭建个人博客（二）---主题安装配置</div>
+        </a>
+    
+</nav>
+
 
     
 </article>
