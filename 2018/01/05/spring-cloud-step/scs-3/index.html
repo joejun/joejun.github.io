@@ -3,19 +3,19 @@
 <head>
     <meta charset="utf-8">
     
-    <title>(Hexo+Github)绑定个人域名 | never too late</title>
+    <title>spring cloud 微服务（三） --服务消费与负载均衡 | never too late</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="域名服务选择GoDaddy，国内的万网虽然便宜些，但据说有诸多弊端（随时会被zf关停~）； GoDaddy 购买： 我选择1年的，其他都不选择（要钱的啊-.-），支持支付宝购买~ 激活： 会往注册邮箱发送激活邮件，记得确认才能在GoDaddy上继续配置 配置： DNS MANAGEMENT目录下 添加Records，blog为子域名   Type  |    Name |    Value">
+    <meta name="description" content="Ribbon  使用负载均衡，轮询访问 服务提供方 Provider  启动第2个provider服务，端口使用 9002 1java -jar -Dserver.port=9092 xxxProvider.jar  eureka中发现2个 provider服务 1UP (2) - joe-PC:provider-service:9002 , joe-PC:provider-service:90">
 <meta property="og:type" content="article">
-<meta property="og:title" content="(Hexo+Github)绑定个人域名">
-<meta property="og:url" content="http://yoursite.com/2018/01/05/bind-domain/index.html">
+<meta property="og:title" content="spring cloud 微服务（三） --服务消费与负载均衡">
+<meta property="og:url" content="http://yoursite.com/2018/01/05/spring-cloud-step/scs-3/index.html">
 <meta property="og:site_name" content="never too late">
-<meta property="og:description" content="域名服务选择GoDaddy，国内的万网虽然便宜些，但据说有诸多弊端（随时会被zf关停~）； GoDaddy 购买： 我选择1年的，其他都不选择（要钱的啊-.-），支持支付宝购买~ 激活： 会往注册邮箱发送激活邮件，记得确认才能在GoDaddy上继续配置 配置： DNS MANAGEMENT目录下 添加Records，blog为子域名   Type  |    Name |    Value">
+<meta property="og:description" content="Ribbon  使用负载均衡，轮询访问 服务提供方 Provider  启动第2个provider服务，端口使用 9002 1java -jar -Dserver.port=9092 xxxProvider.jar  eureka中发现2个 provider服务 1UP (2) - joe-PC:provider-service:9002 , joe-PC:provider-service:90">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-01-05T01:26:57.178Z">
+<meta property="og:updated_time" content="2018-01-05T09:22:27.358Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="(Hexo+Github)绑定个人域名">
-<meta name="twitter:description" content="域名服务选择GoDaddy，国内的万网虽然便宜些，但据说有诸多弊端（随时会被zf关停~）； GoDaddy 购买： 我选择1年的，其他都不选择（要钱的啊-.-），支持支付宝购买~ 激活： 会往注册邮箱发送激活邮件，记得确认才能在GoDaddy上继续配置 配置： DNS MANAGEMENT目录下 添加Records，blog为子域名   Type  |    Name |    Value">
+<meta name="twitter:title" content="spring cloud 微服务（三） --服务消费与负载均衡">
+<meta name="twitter:description" content="Ribbon  使用负载均衡，轮询访问 服务提供方 Provider  启动第2个provider服务，端口使用 9002 1java -jar -Dserver.port=9092 xxxProvider.jar  eureka中发现2个 provider服务 1UP (2) - joe-PC:provider-service:9002 , joe-PC:provider-service:90">
     
 
     
@@ -210,7 +210,7 @@
 </aside>
 
             
-            <section id="main"><article id="post-bind-domain" class="article article-type-post" itemscope itemprop="blogPost">
+            <section id="main"><article id="post-spring-cloud-step/scs-3" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
         
@@ -218,7 +218,7 @@
                 
     
         <h1 class="article-title" itemprop="name">
-            (Hexo+Github)绑定个人域名
+            spring cloud 微服务（三） --服务消费与负载均衡
         </h1>
     
 
@@ -227,8 +227,8 @@
                         
     <div class="article-date">
         <i class="fa fa-calendar"></i>
-        <a href="/2018/01/05/bind-domain/">
-            <time datetime="2018-01-05T00:55:45.467Z" itemprop="datePublished">2018-01-05</time>
+        <a href="/2018/01/05/spring-cloud-step/scs-3/">
+            <time datetime="2018-01-05T07:54:14.839Z" itemprop="datePublished">2018-01-05</time>
         </a>
     </div>
 
@@ -243,18 +243,34 @@
         <div class="article-entry" itemprop="articleBody">
         
             
-            <p>域名服务选择GoDaddy，国内的万网虽然便宜些，但据说有诸多弊端（随时会被zf关停~）；</p>
-<h2 id="GoDaddy"><a href="#GoDaddy" class="headerlink" title="GoDaddy"></a>GoDaddy</h2><ul>
-<li>购买： 我选择1年的，其他都不选择（要钱的啊-.-），支持支付宝购买~</li>
-<li>激活： 会往注册邮箱发送激活邮件，记得确认才能在GoDaddy上继续配置</li>
-<li>配置： DNS MANAGEMENT目录下 添加Records，blog为子域名<br>  <strong> Type  |    Name |    Value   
-  </strong> CNAME |    blog |    joejun.github.io<h2 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo"></a>Hexo</h2></li>
-<li><p>添加CNAME：注意必须是大写，在hexo的source目录下新建，里面写入域名</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">blog.zhaopeijun.com</span><br></pre></td></tr></table></figure>
+            <a id="more"></a>
+<h2 id="Ribbon"><a href="#Ribbon" class="headerlink" title="Ribbon"></a>Ribbon</h2><p>  使用负载均衡，轮询访问 服务提供方 Provider</p>
+<ul>
+<li><p>启动第2个provider服务，端口使用 9002</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java -jar -Dserver.port=9092 xxxProvider.jar</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>生成文件，上传github，测试<a href="blog.zhaopeijun.com">博客地址</a>ok~ </p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+<li><p>eureka中发现2个 provider服务</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">UP (2) - joe-PC:provider-service:9002 , joe-PC:provider-service:9001</span><br></pre></td></tr></table></figure>
 </li>
+</ul>
+<h2 id="创建消费者工程"><a href="#创建消费者工程" class="headerlink" title="创建消费者工程"></a>创建消费者工程</h2><ul>
+<li><p>构建基础Springboot工程 pom.xml如下：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">parent</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-parent<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">version</span>&gt;</span>1.3.5.RELEASE<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">relativePath</span>/&gt;</span> <span class="comment">&lt;!-- lookup parent f</span></span><br><span class="line"><span class="comment">	rom repository --&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">parent</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">properties</span>&gt;</span></span><br><span class="line">   		<span class="tag">&lt;<span class="name">project.build.sourceEncoding</span>&gt;</span>UTF-8<span class="tag">&lt;/<span class="name">project.build.sourceEncoding</span>&gt;</span></span><br><span class="line">   		<span class="comment">&lt;!--&lt;project.reporting.outputEncoding&gt;UTF-8&lt;/project.reporting.outputEncoding&gt;--&gt;</span></span><br><span class="line">   		<span class="tag">&lt;<span class="name">java.version</span>&gt;</span>1.8<span class="tag">&lt;/<span class="name">java.version</span>&gt;</span></span><br><span class="line">   		<span class="comment">&lt;!--&lt;spring-cloud.version&gt;Brixton.RELEASE&lt;/spring-cloud.version&gt;--&gt;</span></span><br><span class="line">   	<span class="tag">&lt;/<span class="name">properties</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">dependencies</span>&gt;</span></span><br><span class="line">   		<span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">   			<span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.cloud<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">   			<span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-cloud-starter-ribbon<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">   		<span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">   		<span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">   			<span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.cloud<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">   			<span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-cloud-starter-eureka<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">   		<span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">   </span><br><span class="line">   		<span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">   			<span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">   			<span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-test<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">   			<span class="tag">&lt;<span class="name">scope</span>&gt;</span>test<span class="tag">&lt;/<span class="name">scope</span>&gt;</span></span><br><span class="line">   		<span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">   	<span class="tag">&lt;/<span class="name">dependencies</span>&gt;</span></span><br><span class="line">   </span><br><span class="line">   	<span class="tag">&lt;<span class="name">dependencyManagement</span>&gt;</span></span><br><span class="line">   		<span class="tag">&lt;<span class="name">dependencies</span>&gt;</span></span><br><span class="line">   			<span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">   				<span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.cloud<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">   				<span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-cloud-dependencies<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">   				<span class="tag">&lt;<span class="name">version</span>&gt;</span>Brixton.RELEASE<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">   				<span class="tag">&lt;<span class="name">type</span>&gt;</span>pom<span class="tag">&lt;/<span class="name">type</span>&gt;</span></span><br><span class="line">   				<span class="tag">&lt;<span class="name">scope</span>&gt;</span>import<span class="tag">&lt;/<span class="name">scope</span>&gt;</span></span><br><span class="line">   			<span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">   		<span class="tag">&lt;/<span class="name">dependencies</span>&gt;</span></span><br><span class="line">   	<span class="tag">&lt;/<span class="name">dependencyManagement</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>启动类配置</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@EnableDiscoveryClient</span></span><br><span class="line"><span class="meta">@SpringBootApplication</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">EurekaServiceConsumerApplication</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="meta">@Bean</span></span><br><span class="line">	<span class="meta">@LoadBalanced</span></span><br><span class="line">	<span class="function">RestTemplate <span class="title">restTemplate</span><span class="params">()</span></span>&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="keyword">new</span> RestTemplate();</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		SpringApplication.run(EurekaServiceConsumerApplication.class, args);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>配置文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">spring.application.name=consumer-ribbon</span><br><span class="line">server.port=9005</span><br><span class="line">eureka.client.serviceUrl.defaultZone=http://localhost:9000/eureka/</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>创建服务消费接口</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@RestController</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ConsumerController</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    RestTemplate restTemplate;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@RequestMapping</span>(value = <span class="string">"/consume"</span>, method = RequestMethod.GET)</span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">consume</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> restTemplate.getForEntity(<span class="string">"http://PROVIDER-SERVICE/query?msg=hello-provider"</span></span><br><span class="line">                ,String.class).getBody();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>请求2次，9001 9002控制台分别输出日志：</p>
+<ul>
+<li>2018-01-05 17:16:38.719  INFO 4708 — [nio-9001-exec-1] c.j.e.controller.ProviderController      :<br>Provider, /query ,host:joe-PC,serviceId:provider-service,msg:hello-provider</li>
+<li>2018-01-05 17:16:51.416  INFO 22188 — [nio-9002-exec-1] c.j.e.controller.ProviderController      :<br>Provider, /query ,host:joe-PC,serviceId:provider-service,msg:hello-provider</li>
 </ul>
 
         
@@ -266,7 +282,7 @@
 
 </div>
 
-    <a data-url="http://yoursite.com/2018/01/05/bind-domain/" data-id="cjc18kz850000m8fc58i433pe" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://yoursite.com/2018/01/05/spring-cloud-step/scs-3/" data-id="cjc1mjyke0000r4fc0cstqs7y" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -341,19 +357,10 @@
         
 <nav id="article-nav">
     
-        <a href="/2018/01/05/spring-cloud-step/scs-1/" id="article-nav-newer" class="article-nav-link-wrap">
-            <strong class="article-nav-caption">Newer</strong>
-            <div class="article-nav-title">
-                
-                    spring cloud 微服务（一） --介绍
-                
-            </div>
-        </a>
     
-    
-        <a href="/2018/01/03/hexo-theme-setup/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/2018/01/05/spring-cloud-step/scs-2/" id="article-nav-older" class="article-nav-link-wrap">
             <strong class="article-nav-caption">Older</strong>
-            <div class="article-nav-title">使用Hexo+Github搭建个人博客（二）---主题安装配置</div>
+            <div class="article-nav-title">spring cloud 微服务（二） --服务注册与发现</div>
         </a>
     
 </nav>

@@ -3,19 +3,19 @@
 <head>
     <meta charset="utf-8">
     
-    <title>(Hexo+Github)绑定个人域名 | never too late</title>
+    <title>spring cloud 微服务（一） --介绍 | never too late</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="域名服务选择GoDaddy，国内的万网虽然便宜些，但据说有诸多弊端（随时会被zf关停~）； GoDaddy 购买： 我选择1年的，其他都不选择（要钱的啊-.-），支持支付宝购买~ 激活： 会往注册邮箱发送激活邮件，记得确认才能在GoDaddy上继续配置 配置： DNS MANAGEMENT目录下 添加Records，blog为子域名   Type  |    Name |    Value">
+    <meta name="description" content="传统架构过程 单体应用    单个web服务器、应用、db 发布快速灵活，符合简单业务需求   垂直架构  业务变得复杂，系统分成前端系统、后台应用、管控台等 使用SSH、乃至前后端分离等     服务化架构（SOA 面向服务架构，是一种松耦合的服务架构。）  服务子系统越来越多，即考虑服务SOA化，一个系统划分多个组件服务来完成 如项目中 订单服务组件化、公共服务组件等   如使用 Dubbo">
 <meta property="og:type" content="article">
-<meta property="og:title" content="(Hexo+Github)绑定个人域名">
-<meta property="og:url" content="http://yoursite.com/2018/01/05/bind-domain/index.html">
+<meta property="og:title" content="spring cloud 微服务（一） --介绍">
+<meta property="og:url" content="http://yoursite.com/2018/01/05/spring-cloud-step/scs-1/index.html">
 <meta property="og:site_name" content="never too late">
-<meta property="og:description" content="域名服务选择GoDaddy，国内的万网虽然便宜些，但据说有诸多弊端（随时会被zf关停~）； GoDaddy 购买： 我选择1年的，其他都不选择（要钱的啊-.-），支持支付宝购买~ 激活： 会往注册邮箱发送激活邮件，记得确认才能在GoDaddy上继续配置 配置： DNS MANAGEMENT目录下 添加Records，blog为子域名   Type  |    Name |    Value">
+<meta property="og:description" content="传统架构过程 单体应用    单个web服务器、应用、db 发布快速灵活，符合简单业务需求   垂直架构  业务变得复杂，系统分成前端系统、后台应用、管控台等 使用SSH、乃至前后端分离等     服务化架构（SOA 面向服务架构，是一种松耦合的服务架构。）  服务子系统越来越多，即考虑服务SOA化，一个系统划分多个组件服务来完成 如项目中 订单服务组件化、公共服务组件等   如使用 Dubbo">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-01-05T01:26:57.178Z">
+<meta property="og:updated_time" content="2018-01-05T06:52:56.433Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="(Hexo+Github)绑定个人域名">
-<meta name="twitter:description" content="域名服务选择GoDaddy，国内的万网虽然便宜些，但据说有诸多弊端（随时会被zf关停~）； GoDaddy 购买： 我选择1年的，其他都不选择（要钱的啊-.-），支持支付宝购买~ 激活： 会往注册邮箱发送激活邮件，记得确认才能在GoDaddy上继续配置 配置： DNS MANAGEMENT目录下 添加Records，blog为子域名   Type  |    Name |    Value">
+<meta name="twitter:title" content="spring cloud 微服务（一） --介绍">
+<meta name="twitter:description" content="传统架构过程 单体应用    单个web服务器、应用、db 发布快速灵活，符合简单业务需求   垂直架构  业务变得复杂，系统分成前端系统、后台应用、管控台等 使用SSH、乃至前后端分离等     服务化架构（SOA 面向服务架构，是一种松耦合的服务架构。）  服务子系统越来越多，即考虑服务SOA化，一个系统划分多个组件服务来完成 如项目中 订单服务组件化、公共服务组件等   如使用 Dubbo">
     
 
     
@@ -210,7 +210,7 @@
 </aside>
 
             
-            <section id="main"><article id="post-bind-domain" class="article article-type-post" itemscope itemprop="blogPost">
+            <section id="main"><article id="post-spring-cloud-step/scs-1" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
         
@@ -218,7 +218,7 @@
                 
     
         <h1 class="article-title" itemprop="name">
-            (Hexo+Github)绑定个人域名
+            spring cloud 微服务（一） --介绍
         </h1>
     
 
@@ -227,8 +227,8 @@
                         
     <div class="article-date">
         <i class="fa fa-calendar"></i>
-        <a href="/2018/01/05/bind-domain/">
-            <time datetime="2018-01-05T00:55:45.467Z" itemprop="datePublished">2018-01-05</time>
+        <a href="/2018/01/05/spring-cloud-step/scs-1/">
+            <time datetime="2018-01-05T06:08:49.218Z" itemprop="datePublished">2018-01-05</time>
         </a>
     </div>
 
@@ -243,17 +243,46 @@
         <div class="article-entry" itemprop="articleBody">
         
             
-            <p>域名服务选择GoDaddy，国内的万网虽然便宜些，但据说有诸多弊端（随时会被zf关停~）；</p>
-<h2 id="GoDaddy"><a href="#GoDaddy" class="headerlink" title="GoDaddy"></a>GoDaddy</h2><ul>
-<li>购买： 我选择1年的，其他都不选择（要钱的啊-.-），支持支付宝购买~</li>
-<li>激活： 会往注册邮箱发送激活邮件，记得确认才能在GoDaddy上继续配置</li>
-<li>配置： DNS MANAGEMENT目录下 添加Records，blog为子域名<br>  <strong> Type  |    Name |    Value   
-  </strong> CNAME |    blog |    joejun.github.io<h2 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo"></a>Hexo</h2></li>
-<li><p>添加CNAME：注意必须是大写，在hexo的source目录下新建，里面写入域名</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">blog.zhaopeijun.com</span><br></pre></td></tr></table></figure>
+            <a id="more"></a>
+<h2 id="传统架构过程"><a href="#传统架构过程" class="headerlink" title="传统架构过程"></a>传统架构过程</h2><ul>
+<li><p>单体应用  </p>
+<ul>
+<li>单个web服务器、应用、db</li>
+<li>发布快速灵活，符合简单业务需求</li>
+</ul>
 </li>
-<li><p>生成文件，上传github，测试<a href="blog.zhaopeijun.com">博客地址</a>ok~ </p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+<li><p>垂直架构</p>
+<ul>
+<li>业务变得复杂，系统分成前端系统、后台应用、管控台等</li>
+<li>使用SSH、乃至前后端分离等  </li>
+</ul>
+</li>
+<li><p>服务化架构（SOA 面向服务架构，是一种松耦合的服务架构。）</p>
+<ul>
+<li>服务子系统越来越多，即考虑服务SOA化，一个系统划分多个组件服务来完成</li>
+<li>如项目中 订单服务组件化、公共服务组件等  </li>
+<li>如使用 Dubbo进行服务治理  </li>
+</ul>
+</li>
+<li><p>微服务 （SOA的扩展，拆分粒度更细、彻底组件化）</p>
+<ul>
+<li>业务系统服务彻底组件化，一个组件即一个独立产品、对外提供服务</li>
+<li>每个微服务有各自独立运行空间、db</li>
+<li>组件间推荐使用Rest Api方式请求</li>
+<li>各个服务独立部署、维护、扩展、负载均衡</li>
+</ul>
+</li>
+</ul>
+<h2 id="Spring-Cloud"><a href="#Spring-Cloud" class="headerlink" title="Spring Cloud"></a>Spring Cloud</h2><ul>
+<li>基于Spring Boot实现的云应用开发工具</li>
+<li>核心特性<ul>
+<li>服务注册、发现 Eureka：连接各个服务</li>
+<li>配置中心    Spring Cloud Config：分布式版本管理</li>
+<li>负载均衡    Ribbon：</li>
+<li>断路器 Hystrix：监控服务健康，多次失败后熔断</li>
+<li>服务间调用 Feign</li>
+<li>网关 Zuul：转发对外的请求、服务，API网关作用</li>
+</ul>
 </li>
 </ul>
 
@@ -266,7 +295,7 @@
 
 </div>
 
-    <a data-url="http://yoursite.com/2018/01/05/bind-domain/" data-id="cjc18kz850000m8fc58i433pe" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://yoursite.com/2018/01/05/spring-cloud-step/scs-1/" data-id="cjc1iv1iw0002csfcohd1xceo" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -341,19 +370,19 @@
         
 <nav id="article-nav">
     
-        <a href="/2018/01/05/spring-cloud-step/scs-1/" id="article-nav-newer" class="article-nav-link-wrap">
+        <a href="/2018/01/05/spring-cloud-step/scs-2/" id="article-nav-newer" class="article-nav-link-wrap">
             <strong class="article-nav-caption">Newer</strong>
             <div class="article-nav-title">
                 
-                    spring cloud 微服务（一） --介绍
+                    spring cloud 微服务（二） --服务注册与发现
                 
             </div>
         </a>
     
     
-        <a href="/2018/01/03/hexo-theme-setup/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/2018/01/05/bind-domain/" id="article-nav-older" class="article-nav-link-wrap">
             <strong class="article-nav-caption">Older</strong>
-            <div class="article-nav-title">使用Hexo+Github搭建个人博客（二）---主题安装配置</div>
+            <div class="article-nav-title">(Hexo+Github)绑定个人域名</div>
         </a>
     
 </nav>
